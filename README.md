@@ -28,3 +28,16 @@
     width: 100%;
 }
 ```
+
+* [unbound attribute pass](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/components_composition.htm)
+```
+<!--c:nestedComponents2-->
+<aura:component>
+    <aura:attribute name="passthrough" type="String" default="passed attribute"/>
+    Observe!  Components within components!
+
+    <c:helloHTML/>
+
+    <c:helloAttributes whom="{#v.passthrough}"/>
+</aura:component>
+```
